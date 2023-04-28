@@ -1,5 +1,5 @@
 #!/bin/bash
-DATABASE_PASS='admin123'
+DATABASE_PASS='MySQL123'
 sudo yum update -y
 sudo yum install epel-release -y
 sudo yum install git zip unzip -y
@@ -10,7 +10,8 @@ sudo yum install mariadb-server -y
 sudo systemctl start mariadb
 sudo systemctl enable mariadb
 cd /tmp/
-git clone -b local-setup https://github.com/devopshydclub/vprofile-project.git
+#git clone -b local-setup https://github.com/devopshydclub/vprofile-project.git
+git clone https://github.com/hiteshtalhilyani/Java-WebApp-Local-Setup.git
 #restore the dump file for the application
 sudo mysqladmin -u root password "$DATABASE_PASS"
 sudo mysql -u root -p"$DATABASE_PASS" -e "UPDATE mysql.user SET Password=PASSWORD('$DATABASE_PASS') WHERE User='root'"
@@ -29,9 +30,9 @@ sudo systemctl restart mariadb
 
 
 #starting the firewall and allowing the mariadb to access from port no. 3306
-sudo systemctl start firewalld
-sudo systemctl enable firewalld
-sudo firewall-cmd --get-active-zones
-sudo firewall-cmd --zone=public --add-port=3306/tcp --permanent
-sudo firewall-cmd --reload
-sudo systemctl restart mariadb
+#sudo systemctl start firewalld
+#sudo systemctl enable firewalld
+#sudo firewall-cmd --get-active-zones
+#sudo firewall-cmd --zone=public --add-port=3306/tcp --permanent
+#sudo firewall-cmd --reload
+#sudo systemctl restart mariadb
