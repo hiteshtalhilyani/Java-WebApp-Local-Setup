@@ -49,7 +49,7 @@ systemctl enable tomcat
 git clone https://github.com/hiteshtalhilyani/Java-WebApp-Local-Setup.git
 #git clone -b local-setup https://github.com/devopshydclub/vprofile-project.git
 #cd vprofile-project
-cd project-info
+cd Java-WebApp-Local-Setup/project-info
 mvn install
 systemctl stop tomcat
 sleep 60
