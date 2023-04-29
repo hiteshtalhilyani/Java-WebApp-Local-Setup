@@ -5,7 +5,7 @@ VM SETUP
     - cd Automated Setup - Multi Tier WebApp Locally
     - cd vagrant
     - vagrant up 
-
+    - vboxsf
 2.  vagrant ssh web01
     ping app01
     logout

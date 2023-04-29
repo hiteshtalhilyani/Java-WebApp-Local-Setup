@@ -45,7 +45,7 @@ Then look for the file :
 1. Machine Provisioning using vagrant
 - Vagrant plugins
 a. vagrant plugin install vagrant-hostmanager
-b. vagrant plugin install vagrant-vbguest   # Optional need to execute in case of error
+b. vagrant plugin install vagrant-vbguest   # Optional need to execute in case of vboxsf error
 
 # Final Review - Flow of Execution 
         1. Setup Tools like - vagrant, oracle virtual, chocolatey for windows etc
